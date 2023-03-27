@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif");
+@import url("https://fonts.googleapis.com/css?family=Lusitana");
+@import url("/reusable-resources/navbar/navbar-style.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* Code for Section 1 starts */
+/* Properties for section 1 */
+
+#section-1 {
+    background: url(./image-src/home_page_bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Overridden CSS */
+
+header {
+    position: absolute;
+    background: transparent;
+}
+
+/* Site Content Code */
+
+.site-body {
+    margin: 0% 5%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -1;
+}
+
+.site-body .content {
+    max-width: 700px;
+}
+
+#main-book-emoji {
+    width: 7rem;
+    margin-bottom: .75em;
+}
+
+.site-body .content h1 {
+    font-family: source-serif-pro;
+    font-size: 6.5rem;
+    color: #000000;
+}
+
+.site-body .content p {
+    margin-top: 0.5em;
+    font-size: 1.6rem;
+    color: #000000;
+}
+
+#know-more-btn {
+    display: inline-block;
+    background: rgb(40, 65, 175);
+    margin-top: 1em;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+#quick-link {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: rgb(40, 65, 175);
+    margin-left: 1em;
+}
+
+#quick-link:hover {
+    border-bottom: 1px solid rgb(40, 65, 175);
+}
+
+#quick-link-arrow {
+    font-size: 1.6rem;
+    padding-left: 5px;
+    text-decoration: none;
+    color: rgb(40, 65, 175);
+}
+
+.scroll-down-btn {
+    height: 35px;
+    width: 25px;
+    border-radius: 15px;
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    cursor: pointer;
+}
+
+.scroll-down-btn::before,
+.scroll-down-btn::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid black;
+    height: 8px;
+    width: 8px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: btn-down-animation 1s ease-in-out infinite;
+}
+
+.scroll-down-btn::after {
+    top: 40%;
+    animation-delay: 0.4s;
+}
+
+@keyframes btn-down-animation {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+}
+
+/* Section 1 ends */
+/* Code for Section 2 starts */
+
+#next {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: floralwhite;
+    position: relative;
+}
+
+.section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: floralwhite;
+    position: relative;
+}
+
+.scroll-up-btn {
+    height: 35px;
+    width: 25px;
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    cursor: pointer;
+}
+
+.scroll-up-btn::before,
+.scroll-up-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    border: 2px solid black;
+    height: 8px;
+    width: 8px;
+    transform: translate(50%, 50%) rotate(45deg);
+    border-bottom: transparent;
+    border-right: transparent;
+    animation: btn-up-animation 1s ease-in-out infinite;
+}
+
+.scroll-up-btn::after {
+    bottom: 40%;
+    animation-delay: 0.4s;
+}
+
+@keyframes btn-up-animation {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        bottom: 90%;
+    }
+}
+
+/* Responsiveness Code */
+
+@media (max-width: 1400px) {
+    .site-body {
+        top: 0;
+        left: 0;
+        width: 90%;
+        margin: 0% 5%;
+    }
+
+    .resources-modal-container {
+        width: 60%;
+    }
+
+    .site-body .content {
+        min-width: 0;
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        margin-left: 2%;
+        padding: 0%;
+    }
+}
+
+@media (max-width: 980px) {
+    .site-body {
+        width: 90%;
+        margin: 0% 5%;
+        align-items: center;
+    }
+
+    .site-body .content {
+        min-width: 0;
+        max-width: 700px;
+        width: 100%;
+    }
+
+    #main-book-emoji {
+        width: 6rem;
+    }
+
+    .site-body .content h1 {
+        font-size: 4.5rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 3% 0% 5% 0%;
+        padding: 0%;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-body {
+        width: 100%;
+        margin: 0%;
+        padding: 3%;
+    }
+
+    .site-body .content {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #title-image {
+        width: 90%;
+    }
+
+    .site-body .content h1 {
+        font-size: 4.5rem;
+    }
+
+    .site-body .links-table {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .site-body .links-table .links {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 3% 0% 5% 0%;
+        padding: 0%;
+    }
+}
+
+@media (max-width: 475px) {
+    .site-body .content h1 {
+        font-size: 4.5rem;
+    }
+
+    .site-body .content p {
+        font-size: 1.5rem;
+    }
+
+    #quick-link, #know-more-btn {
+        font-size: 1.5rem;
+    }
+}

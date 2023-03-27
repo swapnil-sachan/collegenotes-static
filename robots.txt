@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: 
+Disallow: /image-src/
+Disallow: /cse/second-year/discrete-math/chapterwise-swapnil/notes-pdf/
+Disallow: /favicon/
+Sitemap: https://www.collegenotes.co.in/sitemap.xml
